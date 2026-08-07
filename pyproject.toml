@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "phyagent"
+version = "0.1.0"
+description = "Law-governed prototype for verifiable physical reasoning in AI agents"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Alberto Fernandez-Isabel"}]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.scripts]
+phyagent = "phyagent.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/phyagent"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

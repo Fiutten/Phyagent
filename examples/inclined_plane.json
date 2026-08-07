@@ -1,0 +1,24 @@
+{
+  "problem_id": "inclined-plane-001",
+  "domain": "classical_mechanics",
+  "goal": "Compute terminal speed and verify the energy balance.",
+  "assumptions": ["rigid_body", "uniform_gravity"],
+  "context": {
+    "task": "inclined_plane",
+    "entity_id": "block",
+    "angle_deg": 30.0,
+    "gravity": 9.80665
+  },
+  "entities": [
+    {
+      "entity_id": "block",
+      "entity_type": "rigid_body",
+      "properties": {
+        "mass": {"value": 2.0, "unit": "kg", "status": "observed"},
+        "height": {"value": 1.5, "unit": "m", "status": "provided"},
+        "path_length": {"value": 3.0, "unit": "m", "status": "provided"},
+        "friction_coefficient": {"value": 0.1, "unit": "1", "status": "assumed"}
+      }
+    }
+  ]
+}

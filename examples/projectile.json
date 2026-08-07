@@ -1,0 +1,21 @@
+{
+  "problem_id": "projectile-001",
+  "domain": "classical_mechanics",
+  "goal": "Compute the ideal trajectory observables.",
+  "assumptions": ["inertial_frame", "uniform_gravity", "no_air_drag", "equal_launch_landing_height"],
+  "context": {
+    "task": "projectile",
+    "entity_id": "projectile",
+    "angle_deg": 45.0,
+    "gravity": 9.80665
+  },
+  "entities": [
+    {
+      "entity_id": "projectile",
+      "entity_type": "point_mass",
+      "properties": {
+        "initial_speed": {"value": 20.0, "unit": "m/s", "status": "provided"}
+      }
+    }
+  ]
+}
